@@ -7,8 +7,13 @@ class ArrayList {
 
 public:
 	ArrayList();
+	void add(T element);
+	int size();
+	T get(int index);
 private:
-	int size = 0;
+	int length = 0;
+	int capacity;
+	T* array;
 };
 
 #include "ArrayList.cpp"
