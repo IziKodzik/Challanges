@@ -139,7 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\HourGlasses\Main.cpp" />
+    <ClCompile Include="src\ArrayList.cpp" />
+    <ClCompile Include="src\HourGlasses\HourGlasses.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ArrayList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
