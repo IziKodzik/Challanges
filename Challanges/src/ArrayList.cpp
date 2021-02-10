@@ -14,22 +14,16 @@ ArrayList<T>::ArrayList() {
 
 template <typename T>
 void ArrayList<T>::add(T element){
-	cout << this->size() << endl;
-	cout << this->capacity << endl;
-	cout << "iteration" << endl;
+
 	if (this->size() >= this->capacity) {
 		this->capacity *= 2;
-		T* tmp_array = new T[this->capacity];
-		for (int op = 0; op < this->size; ++op) {
-			tmp_array[op] = this->array[op];
-
+		T* tmp_array = new T[capacity];
+		for (int i = 0; i < this->size(); ++i) {
+			tmp_array[i] = this->array[i];
 		}
-	} else {
-
+		this->array = tmp_array;
 	}
-	cout <<"-----------------------------------------------" << endl;
-
-
+	this->array[this->size()] = element;
 	++this->length;
 };
 
@@ -41,6 +35,16 @@ int ArrayList<T>::size() {
 template <typename T>
 T ArrayList<T>::get(int index) {
 	return this->array[index];
+}
+
+template <typename T>
+void ArrayList<T>::present() {
+
+
+	for (int i = 0; i < this->size(); ++i)
+		cout << "[" << this->array[i] << "]";
+	
+	cout << endl;
 }
 
 #endif

@@ -10,6 +10,7 @@ public:
 	void add(T element);
 	int size();
 	T get(int index);
+	void present();
 private:
 	int length = 0;
 	int capacity;
