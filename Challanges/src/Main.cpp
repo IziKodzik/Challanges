@@ -1,4 +1,10 @@
+#include <iostream>
+#include <string>
 #include "ArrayList/ArrayList.h"
+#include "Exceptions/CustomException.h"
+
+using namespace std;
+
 int main() {
 
 	ArrayList<int>* a = new ArrayList<int>();
@@ -14,11 +20,13 @@ int main() {
 	
 
 	try {
+	
 		cout << a->get(-1);
 		cout << a->get(-1);
 		cout << a->get(-1);
+		
 	}
-	catch (int e) {
-		cout << e << endl;
+	catch (CustomException& e) {
+		cout << e.what() << endl;
 	}
 }

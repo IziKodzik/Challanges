@@ -4,6 +4,7 @@
 #define _ARRAY_LIST_
 #include "ArrayList.h"
 #include <iostream>
+#include "../Exceptions/CustomException.h"
 using namespace std;
 
 template <typename T>
@@ -35,7 +36,7 @@ int ArrayList<T>::size() {
 template <typename T>
 T ArrayList<T>::get(int index) {
 	if (index < 0 || index >= this->size())
-		throw - 1;
+		throw CustomException("Index out of bounds exception.");
 	return this->array[index];
 }
 
