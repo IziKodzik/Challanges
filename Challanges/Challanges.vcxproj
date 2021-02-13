@@ -142,10 +142,12 @@
     <ClCompile Include="src\ArrayList\ArrayList.cpp" />
     <ClCompile Include="src\HourGlasses\HourGlasses.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Rzydbers\Rzydbers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ArrayList\ArrayList.h" />
     <ClInclude Include="src\Exceptions\CustomException.h" />
+    <ClInclude Include="src\Rzydbers\Rzydbers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
